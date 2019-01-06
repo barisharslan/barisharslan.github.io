@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+  <!-- Bootstrap CDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- CSS File -->
+  <link rel="stylesheet" type="text/css" href="assets/css/color_game.css">
+  <!-- jQuery CDN -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  
+  
+	<title>RGB Guessing Game</title>
+</head>
+<body>
+  <!-- Title -->
+  <div id="title" class="container-fluid text-center pt-3">
+    <h3 class="p-0 pt-3 m-0">THE GREAT</h1>
+    <h1 id="winningColor" class="p-0 m-0">RGB(0, 0, 0)</h1>
+    <h3 class="p-0 pb-3 m-0">GUESSING GAME</h1>
+  </div>
+
+  <!-- Nav -->
+  <ul id="nav" class="nav justify-content-around">
+    <li class="nav-item">
+        <a id="newColors" onclick="return false" class="nav-link" href="">New Colors</a>
+    </li>
+    <li class="nav-item">
+        <a id="tryAgain" onclick="return false" class="nav-link invisible" href="">Try Again</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Easy</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item difficulty active" onclick="return false" href="">Easy</a>
+        <a class="dropdown-item difficulty" onclick="return false" href="">Normal</a>
+        <a class="dropdown-item difficulty" onclick="return false" href="">Hard</a>
+        <a class="dropdown-item difficulty" onclick="return false" href="">Extreme</a>
+        <a class="dropdown-item difficulty" onclick="return false" href="">Insane</a>
+      </div>
+    </li>
+  </ul>
+
+
+  <!-- Squares -->
+  <div class="container w-70 mx-auto">
+    <div class="row">
+      <div class="square col-xs border-0 shadow-lg"></div>
+      <div class="square col-xs border-0 shadow-lg"></div>
+      <div class="square col-xs border-0 shadow-lg"></div>
+    </div>
+    <div class="row">
+      <div class="square col-xs border-0 shadow-lg"></div>
+      <div class="square col-xs border-0 shadow-lg"></div>
+      <div class="square col-xs border-0 shadow-lg"></div>
+    </div>
+  </div>
+    
+  <script type="text/javascript" src="assets/js/color_game.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
