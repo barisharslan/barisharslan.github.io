@@ -1,5 +1,102 @@
 .container {
-    margin: 3% auto;
+    margin: 0 auto;
     width: 70%;
 }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat";
+    color: "black";
+    background-image: url("../../assets/images/bg.png"),
+                        url("../../assets/images/pawel-czerwinski-1249521-unsplash.jpg");
+}
+
+p {
+    
+    margin: 0 auto;
+}
+
+a {
+    color: #000000;
+}
+
+.navbar{border-bottom: 2px solid rgba(0, 0, 0, 0.2);}
+
+.nav-link {
+    font-size: 3rem;
+    
+}
+
+html{
+    font-size: 10px;
+    
+
+}
+.content{
+    
+    font-size: 2rem;
+    flex: 1 0 auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    width: 52%;
+    text-align: center;
+}
+
+.title {
+    
+}
+
+.main-pic{
+    margin-bottom: 5%;
+    margin-top: 3%;
+    width: 100%;
+    
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    
+}
+
+.footer {
+    flex-shrink: 0;
+  }
+
+/* small */
+@media (min-width: 576px) {
+    html{font-size: 12px;}
+    .nav-link {font-size: 2rem;}
+    /* .nav-link{font-size: 2rem;} */
+    .main-pic{width: 90%;}
+    
+}
+
+/* medium */
+@media (min-width: 768px) {
+    html{font-size: 14px;}
+    .main-pic{width: 75%;}
+    /* .title {font-size: 4rem;} */
+    /* .nav-link{font-size: 1.5rem;} */
+}
+
+/* large */
+@media (min-width: 992px) {
+    html{font-size: 16px;}
+    .main-pic{width: 60%;}
+    /* .title {font-size: 4rem;} */
+    /* .nav-link{font-size: 1.5rem;} */
+    .content{font-size: 1.75rem;}
+}
+
+/* extra large */
+@media (min-width: 1200px) {
+    html{font-size: 18px;}
+    .content{font-size: 1.5rem;}
+    .main-pic{width: 50%;}
+    /* .title {font-size: 5rem;} */
+    /* .nav-link{font-size: 2rem;} */
+}
+
 
