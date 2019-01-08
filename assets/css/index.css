@@ -14,6 +14,8 @@ body {
     color: "black";
     background-image: url("../../assets/images/bg.png"),
                         url("../../assets/images/pawel-czerwinski-1249521-unsplash.jpg");
+    background-attachment: fixed;
+
 }
 
 p {
@@ -21,18 +23,45 @@ p {
     margin: 0 auto;
 }
 
+.nav-link.active {
+    color: rgba(0, 0, 0, 0.9);
+}
+
 a {
-    color: #000000;
+    color: rgba(0, 67, 105, 0.8);
 }
 
 .navbar{border-bottom: 2px solid rgba(0, 0, 0, 0.2);}
 
 .nav-link {
     font-size: 3rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.badge {
+    font-size: 1rem;
+    /* font-weight: 400; */
+}
+
+.project {
+    padding: 3%;
     
 }
 
-html{
+.border-bot {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.btn {
+    font-weight: 700;
+}
+
+html {
     font-size: 10px;
     
 
@@ -43,7 +72,7 @@ html{
     flex: 1 0 auto;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     width: 52%;
-    text-align: center;
+    
 }
 
 .title {
@@ -77,6 +106,7 @@ html{
 @media (min-width: 768px) {
     html{font-size: 14px;}
     .main-pic{width: 75%;}
+    
     /* .title {font-size: 4rem;} */
     /* .nav-link{font-size: 1.5rem;} */
 }
@@ -85,6 +115,9 @@ html{
 @media (min-width: 992px) {
     html{font-size: 16px;}
     .main-pic{width: 60%;}
+    .badge {
+        font-size: 1.25rem;
+    }
     /* .title {font-size: 4rem;} */
     /* .nav-link{font-size: 1.5rem;} */
     .content{font-size: 1.75rem;}
