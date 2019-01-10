@@ -12,10 +12,9 @@ body {
     flex-direction: column;
     font-family: "Montserrat";
     color: "black";
-    background-image: url("../../assets/images/bg.png"),
-                        url("../../assets/images/pawel-czerwinski-1249521-unsplash.jpg");
+    background-image: url("../../assets/images/pawel-czerwinski-1249521-unsplash.jpg");
     background-attachment: fixed;
-
+    font-weight: 700;
 }
 
 p {
@@ -31,15 +30,30 @@ a {
     color: rgba(0, 67, 105, 0.8);
 }
 
+h2 {
+    font-weight: 700;
+}
+
+.title {
+    font-weight: 700;
+}
+
 .navbar{border-bottom: 2px solid rgba(0, 0, 0, 0.2);}
 
 .nav-link {
     font-size: 3rem;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.7)
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-link:hover {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .badge {
@@ -75,10 +89,6 @@ html {
     
 }
 
-.title {
-    
-}
-
 .main-pic{
     margin-bottom: 5%;
     margin-top: 3%;
@@ -88,6 +98,17 @@ html {
     box-shadow: 10px 10px 20px rgb(0, 0, 0);
     
 }
+
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.also-nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
 
 .footer {
     flex-shrink: 0;
