@@ -46,11 +46,11 @@ h2 {
 
 .nav-link {
     font-size: 3rem;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.6);
 }
 .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(255, 255, 255, 0.7);
