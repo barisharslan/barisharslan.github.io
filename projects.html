@@ -46,7 +46,7 @@
     </div>
 
     <!-- Content -->
-    <div class="container content pt-3">
+    <div class="container content main-content pt-3">
         <div class="row project mb-3 border-bot">
             <div class="col-12">
                 <h2>Tapatat</h2>
@@ -54,10 +54,9 @@
                     A clone of <a href="https://www.patatap.com/">Patatap</a> using a collection of sounds from <a href="https://github.com/jonobr1/Neuronal-Synchrony">Neuronal Synchrony</a>.
                 </p>
                 <span class="badge badge-dark d-none d-lg-inline">JS</span>
-                <span class="badge badge-dark d-none d-lg-inline">jQuery</span>
                 <span class="badge badge-dark d-none d-lg-inline">Paper.js</span>
                 <span class="badge badge-dark d-none d-lg-inline">howler.js</span>
-                <a href="tapatatpage.html" class="btn btn-outline-dark float-lg-right">Read More</a>
+                <p href="" class="btn btn-outline-dark float-lg-right">Read More</p>
             </div>
         </div>
 
@@ -70,7 +69,7 @@
                 <span class="badge badge-dark d-none d-lg-inline">JS</span>
                 <span class="badge badge-dark d-none d-lg-inline">jQuery</span>
                 <span class="badge badge-dark d-none d-lg-inline">Bootstrap</span>
-                <a href="color_game.html" class="btn btn-outline-dark float-lg-right">Read More</a>
+                <p class="btn btn-outline-dark float-lg-right">Read More</p>
             </div>
         </div>
 
@@ -82,7 +81,7 @@
                 </p>
                 <span class="badge badge-dark d-none d-lg-inline">Python</span>
                 <span class="badge badge-dark d-none d-lg-inline">PySimpleGUI</span>
-                <a href="https://github.com/barisharslan/WebWizard" class="btn btn-outline-dark float-lg-right">Read More</a>
+                <p href="" class="btn btn-outline-dark float-lg-right">Read More</p>
             </div>
         </div>
         
@@ -95,10 +94,43 @@
                 <span class="badge badge-dark d-none d-lg-inline">JS</span>
                 <span class="badge badge-dark d-none d-lg-inline">jQuery</span>
                 <span class="badge badge-dark d-none d-lg-inline">Bootstrap</span>
-                <a href="index.html" class="btn btn-outline-dark float-lg-right">Read More</a>
+                <p href="" class="btn btn-outline-dark float-lg-right">Read More</p>
             </div>
         </div>
 
+    </div>
+
+    <!-- Tapatat -->
+    <div class="container project-info pt-3" style="display: none;">
+        <div class="row project mb-3">
+            <div class="col-12">
+                <div class="h3"><i class="fas fa-arrow-circle-left mr-2"></i> Tapatat</div>
+                <img class="project-pic" src="assets/images/tapatat.gif" alt="">
+                <p>I actually discovered Patatap last year, and playing around with it helped motivate me to start writing my own music using my computer. So it was a pleasant surprise seeing that there was a project on my Udemy Web Development Bootcamp class that was to make a clone of this awesome little site. <br><br>I started off following the instructor's format, but ended up going all out and making a unique animation for every sound. It's not completely done yet, and the code is very messy right now. Once all animations are done, my plan is going to be to go back and refactor everything, following what I would say a class based approach to generate the animations. <br><br>I used paper.js to generate the animations. It took a bit to understand the flow of the library, which did end up leading to a not so efficient first attempt. Now that I've really taken in how paper.js works, I am confident in improving this project in efficiency and quality. I also used howler.js to handle the sounds being played, which is so simple I didn't run into a single problem.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Game -->
+    <div class="container project-info pt-3" style="display: none;">
+        <div class="row project mb-3">
+            <div class="col-12">
+                <div class="h3"><i class="fas fa-arrow-circle-left mr-2"></i> The Great RGB Guessing Game</div>
+                <img class="project-pic" src="assets/images/colorgame.gif" alt="assets/images/colorgame.png">
+                <p>This was also a project for my Udemy class, which I tried my best to improve and make unique. This is actually my second attempt at the project. When I saw the project, I decided to give it a shot without following along with the instructor, which ultimately led to what you would call "spaghetti code". It got so complicated I forgot that all I was making was a simple guessing game. <br><br> So I gave up and started over, following the instructor. I caught many problems I had overlooked the first time and came out understanding Javascript a great deal more. I finally gave it another shot using jQuery, and also added a difficulty selector, and it gets tough! All that is happening is that the range of possible colors for each square gets tighter and tighter as the difficulty goes up. At the insane difficulty, there is only a range of ± 10 for each value. </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WebWizard -->
+    <div class="container content project-info pt-3" style="display: none;">
+        <div class="row project mb-3">
+            <div class="col-12">
+                <div class="h3"><i class="fas fa-arrow-circle-left mr-2"></i> Web Wizard</div>
+                <img class="project-pic" src="assets/images/webwizard.gif" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque dolor ex doloribus eaque deleniti nostrum, facilis commodi distinctio blanditiis perferendis nemo assumenda quisquam amet maiores laudantium sunt numquam! Placeat, velit.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Bottom Contact Info -->
@@ -118,8 +150,10 @@
     <!-- TODO: Fix Project links, add project pages, fill in about me, resume, and contact pages -->
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="assets/js/main.js"></script>
     </body>
 </html>

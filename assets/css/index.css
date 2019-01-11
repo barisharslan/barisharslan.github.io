@@ -17,6 +17,10 @@ body {
     font-weight: 700;
 }
 
+i:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
 p {
     
     margin: 0 auto;
@@ -71,6 +75,8 @@ h2 {
     border-radius: 5px;
 }
 
+
+
 .btn {
     font-weight: 700;
 }
@@ -89,6 +95,13 @@ html {
     
 }
 
+.project-info {
+    font-size: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    flex: 1 0 auto;
+    width: 55%;
+}
+
 .main-pic{
     margin-bottom: 5%;
     margin-top: 3%;
@@ -99,6 +112,15 @@ html {
     
 }
 
+.project-pic{
+    margin-bottom: 5%;
+    margin-top: 3%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+}
+
+
 .nav-item:hover {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -106,6 +128,10 @@ html {
 .also-nav-item:hover {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+}
+
+.title {
+    font-size: 3rem; 
 }
 
 
@@ -120,6 +146,7 @@ html {
     .nav-link {font-size: 2rem;}
     /* .nav-link{font-size: 2rem;} */
     .main-pic{width: 90%;}
+
     
 }
 
