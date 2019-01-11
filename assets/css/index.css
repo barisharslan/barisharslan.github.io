@@ -95,20 +95,8 @@ html {
     
 }
 
-#plugin {
-    position: absolute;
-}
-
 .contact {
     font-size: 3rem;
-}
-
-#stkovrflw {
-    background-color: rgb(0, 0, 0);
-}
-
-object {
-    padding-bottom: 100%;
 }
 
 .project-info {
