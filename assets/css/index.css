@@ -95,6 +95,10 @@ html {
     
 }
 
+#plugin {
+    position: absolute;
+}
+
 .contact {
     font-size: 3rem;
 }
