@@ -14,6 +14,7 @@ var risingBallsLeft = [];
 var risingBallsRight = [];
 var wobblyBalls = [];
 var rotatingLines = [];
+var bouncingBalls = [];
 // holding down confetti button causes major lag, so added a state variable
 // to slow down confettiMachine evocations
 var confettiState = false;
@@ -194,6 +195,20 @@ function onFrame(event){
         }
     }
 
+    for(var i = 0; i < bouncingBalls.length; i++){
+        bouncingBalls[i].opacity -= 0.027;
+        bouncingBalls[i].position.x += 10;
+        if(bouncingBalls[i].position.x < 1300){
+            bouncingBalls[i].position.y += 15;
+        } else{
+            bouncingBalls[i].position.y -= 15;
+        }
+        console.log(bouncingBalls[i].position.x);
+        if(bouncingBalls[i].opacity < 0.1){
+            bouncingBalls[i].remove();
+            bouncingBalls.splice(i, 1);
+        }
+    }
 
 
 
@@ -478,6 +493,14 @@ function rotateLine(){
     rotatingLines.push(path);
 }
 
+function bouncingBall(){
+    var colors = ["#1a4572", "#5990a5", "#a4668d", "#e097a0", "#fdebd3", "#b8a78b"];
+    var randomPt = randomPoint(0.6, 0.61, 0.5, 0.7);
+    var index = Math.floor(Math.random() * 5);
+    var circle = collapsingCircle(colors[index], 80, randomPt);
+    bouncingBalls.push(circle);
+}
+
 
 
 
@@ -687,6 +710,7 @@ var keyData = {
                 src: ['assets/sounds/suspension.mp3']
             });
             sound.play();
+            bouncingBall();
         }
     },
     c: {
