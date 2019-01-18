@@ -15,6 +15,8 @@ var risingBallsRight = [];
 var wobblyBalls = [];
 var rotatingLines = [];
 var bouncingBalls = [];
+var risingBalls = [];
+var risingEllipses = [];
 // holding down confetti button causes major lag, so added a state variable
 // to slow down confettiMachine evocations
 var confettiState = false;
@@ -197,18 +199,30 @@ function onFrame(event){
 
     for(var i = 0; i < bouncingBalls.length; i++){
         bouncingBalls[i].opacity -= 0.027;
-        bouncingBalls[i].position.x += 10;
+        bouncingBalls[i].position.x += 11;
         if(bouncingBalls[i].position.x < 1300){
             bouncingBalls[i].position.y += 15;
         } else{
             bouncingBalls[i].position.y -= 15;
         }
-        console.log(bouncingBalls[i].position.x);
         if(bouncingBalls[i].opacity < 0.1){
             bouncingBalls[i].remove();
             bouncingBalls.splice(i, 1);
         }
     }
+
+    for(var i = 0; i < risingBalls.length; i++){
+        risingBalls[i].opacity -= 0.027;
+        risingBalls[i].position.y -= 10;
+
+        risingBalls[i].position.x += -1;
+        if(risingBalls[i].opacity < 0.1){
+            risingBalls[i].remove();
+            risingBalls.splice(i, 1);
+        }
+    }
+
+    
 
 
 
@@ -494,15 +508,78 @@ function rotateLine(){
 }
 
 function bouncingBall(){
-    var colors = ["#1a4572", "#5990a5", "#a4668d", "#e097a0", "#fdebd3", "#b8a78b"];
+    var colors = ["#FDC3EF", "#E589EE", "#D7FDFD", "#FF00FF", "#CAD2FF", "#14143A"];
     var randomPt = randomPoint(0.6, 0.61, 0.5, 0.7);
     var index = Math.floor(Math.random() * 5);
     var circle = collapsingCircle(colors[index], 80, randomPt);
     bouncingBalls.push(circle);
 }
 
+function risingBall(){
+    var colors = ["#1a4572", "#5990a5", "#a4668d", "#e097a0", "#fdebd3", "#b8a78b"]; // change
+    var randomPt = randomPoint(0.4, 0.6, 0.4, 0.6);
+    var index = Math.floor(Math.random() * 5);
+    var circle = collapsingCircle(colors[index], 80, randomPt);
+    risingBalls.push(circle);
+}
 
+function risingEllipse(){
+    var colors = ["#FDC3EF", "#E589EE", "#D7FDFD", "#FF00FF", "#CAD2FF", "#14143A"]; // change
+    var randomPt = randomPoint(0.4, 0.6, 0.8, 0.99);
+    var index = Math.floor(Math.random() * 5);
+    var square = new Rectangle(randomPt + new Point(-100, -50), randomPt + new Point(100, 50));
+    var elPath = new Path.Ellipse(square);
+    elPath.fillColor = colors[index];
+    risingBalls.push(elPath);
+}
 
+function bigKick(){
+    var colors = ["#FDC3EF", "#E589EE", "#D7FDFD", "#FF00FF", "#CAD2FF", "#14143A"]; //change
+    var randomPt = randomPoint(0.7, 0.9, 0.7, 0.9);
+    var index = Math.floor(Math.random() * 5);
+    var circle = collapsingCircle(colors[index], 200, randomPt);
+    collapsingCircles.push(circle);
+    
+    var square = new Rectangle(randomPt + new Point(-150, -150), randomPt + new Point(150, 150));
+    var sqPath = new Path.Rectangle(square);
+    sqPath.strokeColor = colors[Math.abs(index - 5)];
+    sqPath.strokeWidth = 50;
+    sqPath.strokeJoin = 'round';
+    sqPath.fillColor = sqPath.strokeColor;
+    collapsingCircles.push(sqPath);
+}
+
+function snap(){
+    var colors = ["#c42f34", "#ed534e", "#ef8f69", "#f4cd8d"]; // change
+    var randomPt = randomPoint(0.5, 0.6, 0, 0.2);
+    var path = new Path();
+    path.add(randomPt + new Point(-40, -60));
+    path.add(randomPt + new Point(40, 60));
+    path.strokeColor = colors[Math.floor(Math.random() * 4)];
+    path.strokeCap = 'round';
+    path.strokeWidth = 30;
+    bouncingBalls.push(path);
+    rotatingLines.push(path);
+}
+
+function rattler(){
+    colors = [
+        "#beddcb",
+        "#a9d8c0",
+        "#7fc1a0",
+        "#5aaa82",
+        "#48a878"
+    ] // change
+    // generate one random collapsingCircle 
+    var randomPt = randomPoint(0.6, 0.8, 0.2, 0.4);
+    var index = Math.floor(Math.random() * 4);
+    var square = new Rectangle(randomPt + new Point(-100, -50), randomPt + new Point(100, 50));
+    var elPath = new Path.Ellipse(square);
+    elPath.fillColor = colors[index];
+    elPath.opacity = 0.4;
+    wobblyBalls.push(elPath);
+       
+}
 
 
 
@@ -719,6 +796,7 @@ var keyData = {
                 src: ['assets/sounds/timer.mp3']
             });
             sound.play();
+            risingBall();
         }
     },
     v: {
@@ -727,6 +805,7 @@ var keyData = {
                 src: ['assets/sounds/ufo.mp3']
             });
             sound.play();
+            risingEllipse();
         }
     },
     b: {
@@ -735,6 +814,7 @@ var keyData = {
                 src: ['assets/sounds/veil.mp3']
             });
             sound.play();
+            bigKick();
         }
     },
     n: {
@@ -743,6 +823,7 @@ var keyData = {
                 src: ['assets/sounds/wipe.mp3']
             });
             sound.play();
+            snap();
         }
     },
     m: {
@@ -751,6 +832,7 @@ var keyData = {
                 src: ['assets/sounds/zig-zag.mp3']
             });
             sound.play();
+            rattler();
         }
     },
     1: {
